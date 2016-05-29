@@ -1,0 +1,46 @@
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc= new Scanner(System.in);
+        int Da = sc.nextInt();
+        int Ma = sc.nextInt();
+        int Ya = sc.nextInt();
+        
+        int De = sc.nextInt();
+        int Me = sc.nextInt();
+        int Ye = sc.nextInt();
+        int diff = 0;
+        //System.out.println(Da+De+Ma+Me+Ya+Ye);
+        if(Ya <= Ye)
+            {
+            if(Ma <= Me)
+                {
+                if(Da <= De)
+                    {
+                    System.out.println("0");
+                }
+                else{
+                    diff = Math.abs(Da - De);
+                    System.out.println(15 * diff);
+                }
+            }
+            else{
+                diff = Math.abs(Ma - Me);
+                System.out.println(500 * diff);
+            }
+        }
+        else{
+            System.out.println("10000");
+        }
+    }
+}

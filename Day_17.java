@@ -1,0 +1,18 @@
+// Day 17: More Exceptions
+
+class Calculator
+    {
+    static int power(int n, int p) throws Exception{
+    if(n<0 || p<0)
+        {throw new Exception("n and p should be non-negative");}
+        else if(p==0){
+            return 1;
+        }
+        else if(n==0){
+            return 0;
+        }
+    else{
+        return (int)Math.pow(n,p);
+    }
+    }
+    }
